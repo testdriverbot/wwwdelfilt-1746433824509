@@ -1,0 +1,11 @@
+version: 4.2.29
+session: 68187bf190973e9f58115aa8
+steps:
+  - prompt: Click on the "Prenumeruoti" button.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Prenumeruoti
+        description: subscription button in the header
+        action: click
