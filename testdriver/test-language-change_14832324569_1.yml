@@ -1,0 +1,21 @@
+version: 4.2.29
+session: 68187beb90973e9f58115a9e
+steps:
+  - prompt: Click on the language selection option.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Lithuanian
+        description: language selection option in the top right corner
+        action: click
+  - prompt: Select "English" from the options.
+    commands:
+      - command: hover-text
+        text: English
+        description: English option in the language selection dropdown
+        action: click
+  - prompt: Assert that the language of the page changes to English.
+    commands:
+      - command: assert
+        expect: the page contains English text like "News" or "Sports"
