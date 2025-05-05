@@ -1,0 +1,28 @@
+version: 4.2.29
+session: 68187bec290e271807919d5b
+steps:
+  - prompt: Focus the search bar.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Paieška
+        description: search bar in the top right corner
+        action: click
+  - prompt: Enter a search query.
+    commands:
+      - command: hover-text
+        text: Įveskite paieškos terminą
+        description: search bar with placeholder text
+        action: click
+      - command: type
+        text: example search query
+  - prompt: Click "Search" button.
+    commands:
+      - command: hover-image
+        description: magnifying glass icon next to the search bar
+        action: click
+  - prompt: Assert that search results are displayed.
+    commands:
+      - command: assert
+        expect: search results for "example search query" are displayed
