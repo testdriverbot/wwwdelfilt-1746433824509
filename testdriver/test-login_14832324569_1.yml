@@ -1,0 +1,44 @@
+version: 4.2.29
+session: 68187bec290e271807919d5d
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Focus the browser window.
+    commands:
+      - command: hover-text
+        text: Delfi
+        description: browser tab with Delfi website
+        action: click
+  - prompt: Click "Login" on the homepage.
+    commands:
+      - command: hover-text
+        text: Prisijungti
+        description: login button on the Delfi homepage
+        action: click
+  - prompt: Enter test credentials.
+    commands:
+      - command: hover-text
+        text: Gal galėtumėte pakomentuoti savo vertinimą?
+        description: comment input field label
+        action: click
+      - command: type
+        text: testuser@example.com
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: password123
+  - prompt: Click "Submit" button.
+    commands:
+      - command: hover-text
+        text: Pateikti
+        description: submit button on the form
+        action: click
+  - prompt: Click "Submit" button.
+    commands:
+      - command: hover-text
+        text: Pateikti
+        description: submit button on the form
+        action: click
