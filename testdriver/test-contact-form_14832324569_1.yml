@@ -1,0 +1,11 @@
+version: 4.2.29
+session: 68187bec90973e9f58115aa2
+steps:
+  - prompt: Navigate to the contact page.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Kontaktai
+        description: contact link in the top navigation bar
+        action: click
